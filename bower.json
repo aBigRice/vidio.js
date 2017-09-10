@@ -1,0 +1,25 @@
+{
+  "name": "media",
+  "private": true,
+  "dependencies": {
+    "zepto": "^1.2.0"
+  },
+  "description": "video/audio",
+  "main": "",
+  "keywords": [
+    "video/audio"
+  ],
+  "authors": [
+    "lynne"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {}
+}

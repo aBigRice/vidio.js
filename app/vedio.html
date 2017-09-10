@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="telephone=no,email=no" name="format-detection" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="telephone=no, email=no" name="format-detection">
+  <!-- 启用360浏览器的极速模式(webkit) -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <meta name="keywords" content="h5 video bug 解决方案" />
+  <meta name="description" content="h5 video bug 解决方案" />
+  <link rel="shortcut icon" href="" type="image/x-icon" />
+  <title>video</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <div class="wraper">
+    <div class="video_layer" id="video_layer">
+    </div>
+  </div>
+  <!-- <div class="videobox" ontouchmove="return false;"> -->
+  <!-- <video id="mainvideo" src="" x5-video-player-type="h5" playsinline webkit-playsinline autopaly controls></video> -->
+  <!-- </div> -->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/zepto/zepto.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+  <script>
+  window.onload = function() {
+    // 初始化video
+    var videoOptions = {
+      url: 'http://pgccdn.v.baidu.com/531151929_71743940_20170908182513.mp4?authorization=bce-auth-v1%2Fc308a72e7b874edd9115e4614e1d62f6%2F2017-09-08T10%3A25%3A15Z%2F-1%2F%2Fb09e1d184a67182cb2388d7fb1cd5ba010e6b21f83eab69c61b85b5f280aef44&responseCacheControl=max-age%3D8640000&responseExpires=Sun%2C+17+Dec+2017+18%3A25%3A15+GMT&xcode=30078a5036f3128adfea44bcb4af7643fb04333e9972f087&time=1504964100&_=1504881029985',
+      poster: 'images/bg.jpg',
+      btnPoster: 'images/btn_video_pause.png',
+    }
+    new MEDIA.video(videoOptions);
+  }
+
+  </script>
+</body>
+
+</html>
